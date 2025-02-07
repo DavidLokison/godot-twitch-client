@@ -12,7 +12,7 @@ enum Status {
 	ERROR = -2
 }
 
-const EventSub = preload("res://twitch-client/event_sub.gd")
+const EventSub = preload("event_sub.gd")
 
 var status := Status.CONNECTING
 var config_file := ConfigFile.new()

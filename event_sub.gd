@@ -33,7 +33,7 @@ func poll(peer: WebSocketPeer = eventsub) -> bool:
 				message_cache[packet.metadata.message_id] = payload
 				match packet.metadata.message_type:
 					'session_welcome':
-						Subscription = preload("./subscription.gd").new(payload.session.id)
+						Subscription = preload("subscription.gd").new(payload.session.id)
 						if client.eventsub is Signal:
 							client.eventsub = self
 							_ready.emit(self)
